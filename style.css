@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Khối chứa 2 cột.
+   Các phần tử float sẽ "thoát" khỏi luồng bình thường nên khối cha bị co chiều cao về 0.
+   overflow: hidden giúp khối cha bao được các phần tử con đang float. */
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 50%;
+    float: left;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.right-column {
+    width: 50%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+}
+
+/* Khối nội dung dài: kích thước cố định, overflow: auto sẽ hiện thanh cuộn khi nội dung quá dài */
+.overflow-box {
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: lightcoral;
+    padding: 10px;
+    overflow: auto;
+    clear: both;
+}
